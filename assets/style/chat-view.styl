@@ -1,0 +1,123 @@
+*
+	margin 0
+	padding 0
+	border 0
+
+#login
+	text-align center
+	font-family Oxygen
+
+	position absolute
+	top 30%
+	width 100%
+
+	#prompt
+		font-size 200%
+
+	#name
+		font-size 200%
+		border-radius 1em
+		text-align center
+		background white
+	#name:focus
+		outline 0
+		box-shadow 0 0 1em 0 white
+
+#chat
+	height 100%
+
+	display none
+	flex-direction column
+	overflow hidden
+
+	#top
+		flex-grow 1
+		display flex
+		flex-direction row
+		overflow hidden
+
+		#messages
+			flex-grow 1
+			overflow auto
+
+			.message
+				font-family Karla
+
+				.name
+					font-family 'Titillium Web'
+					font-weight bold
+					color purple
+					min-width 4em
+					margin-right 1em
+					display inline-block
+
+		#right
+			flex-basis 12em
+			min-width 12em
+
+			box-shadow 0em 0 0.5em 0 black
+
+			display flex
+			flex-direction column
+
+			#rooms
+				flex-grow 1
+
+				display flex
+				flex-direction column
+
+				background #ffc8
+
+				#room-list
+					flex-grow 1
+					overflow auto
+
+					.room
+						font-family Oxygen
+
+						.name
+							display inline-block
+							min-width 10em
+						.count
+							font-family monospace
+							color blue
+							display inline-block
+						.count::before
+							content '('
+							color gray
+						.count::after
+							content ')'
+							color gray
+					.room:hover
+						cursor pointer
+					.room.current
+						font-weight bold
+					.room.current:hover
+						cursor auto
+
+				#new-room
+					flex-basis 1em
+					padding 0.5em
+					background #ffc8
+				#new-room:focus
+					box-shadow inset 0 0 0.25em black
+
+			#users-in-room
+				flex-grow 1
+				overflow auto
+
+				background #cff8
+
+				font-family Oxygen
+
+				.user
+					color green
+
+	#message
+		background #fffc
+		box-shadow 0 0 1em 0 gray
+
+		padding 1em
+		resize none
+	#message:focus
+		box-shadow 0 0 1em 0 black

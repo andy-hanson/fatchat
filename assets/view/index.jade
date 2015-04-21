@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		script(src='./lib/es6-shim/es6-shim.min.js')
+		script(src='./lib/webcomponentsjs/webcomponents.js')
+		link(rel='stylesheet' href='./style/index.css')
+		link#link-chat-view(rel='import' href='./chat-view.html')
+		// RequireJS doesn't play nice with imports.
+		script(src='./lib/requirejs/require.js' data-main='./script/index.js')
+	body
+		chat-view

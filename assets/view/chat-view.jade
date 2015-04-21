@@ -1,0 +1,19 @@
+link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titillium+Web:700|Oxygen|Karla')
+
+template
+	style.
+		@import './style/chat-view.css'
+	#login
+		#prompt
+			span.
+				Name
+		input#name(type='text')
+	#chat
+		#top
+			#messages
+			#right
+				#rooms
+					#room-list
+					input#new-room(type='text' value='new room')
+				#users-in-room
+		input#message(type='text')

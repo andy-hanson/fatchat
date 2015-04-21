@@ -1,0 +1,24 @@
+html, body
+	margin 0
+	padding 0
+	height 100%
+
+body
+	c1 = #e6e6fa80 // Lavender, half transparent
+	c2 = #F0F8FF80 // AliceBlue, half transparent
+	background:
+		repeating-linear-gradient(
+			-45deg,
+			transparent, transparent 25%,
+			c1 0, c1 50%
+		),
+		repeating-linear-gradient(
+			45deg,
+			transparent, transparent 25%,
+			c2 0, c2 50%
+		), antiquewhite
+
+	background-size 3em 3em
+
+chat-view
+	height 100%
